@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" type="icon-docspider" href="images/icon-logo.ico">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+
+    <title>Docspider Teste Desenvolvimento</title>
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Animation -->
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="bg-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="nav-container">
+                            <div class="nav-toggle" onclick="toggleNav()"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-11">
+                        <div id="logoimage">
+                            <img src="images/docspider-logo.png"
+                                alt="Logo Docspider">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <!-- Menu -->
+                        <nav class="nav-items nav-menu" >
+                            <ul>
+                                <li><a href="index.html">Inicio <i class="fas fa-home"></i></a></li>
+                                <li><a href="meusdocs.html">Meus Documentos <i class="far fa-copy"></i></a></li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre <i class="fas fa-info-circle"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <!--Main Content-->
+    <main>
+        <!-- Section -->
+        <section class="animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-12">
+                        <!-- Section Links-->
+                        <nav id="nav-links" >
+                            <ul>
+                                <li><a href="index.html">Inicio </a></li>
+                                <li><i class="fas fa-angle-right"></i></li>
+                                <li><a href="meusdocs.html" >Meus Documentos</a></li>
+                                <li><i class="fas fa-angle-right"></i></li>
+                                <li><a href="listagem.html" >Listagem</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Meus Documentos</h2>
+
+                    </div>
+                    <div class="col-12">
+               
+                        <h3>Listagem</h3>
+                    </div>
+                </div>
+                </div>
+            </div>      
+        </section>
+
+        <!--Listagem-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-12">
+                        <table>
+                            <tr>
+                                <th>Título</th>
+                                <th>Descrição</th>
+                                <th>Nome</th>
+                                <th>Data e Hora de Criação</th>
+                                <th>Download</th>
+                            </tr>
+                            <tr>
+                                <td>Contagem Mulungus</td>
+                                <td>Registros documentados de todos os Mulungus de São Paulo.</td>
+                                <td>Mulungu</td>
+                                <td>09/11/1999</td>
+                                <td><a  class="simplebtn" href="#">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Puella Magi Madoka Magica</td>
+                                <td>Documentação de todas as vezes que Homura voltou no tempo.</td>
+                                <td>Homura</td>
+                                <td>05/03/1965</td>
+                                <td><a  class="invalidbtn" href="#">Download</a></td>
+                            </tr>
+                        </table>
+                    </div>
+        
+                    
+                </div>
+            </div>
+        </section>
+         
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-conteudo">
+                    <img src="images/docspider-logo.png"
+                    alt="Logo Docspider">
+                    <p>v 1.0.0</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+</body>
+</html>

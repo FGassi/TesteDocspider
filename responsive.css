@@ -1,0 +1,48 @@
+@media all and (max-width: 1200px) {
+}
+
+@media all and (max-width: 992px) {
+    /*Menu*/
+    .nav-open .nav-menu {
+        transform: translateX(300px);
+    }
+
+    header nav{
+        left:-300px;
+    }
+
+
+    /*Main*/
+    main{
+        width:100%;
+        margin:0;
+    }
+
+    .nav-open main {
+        transform: translateX(0px);
+      }
+
+    /*Sections*/
+    section{
+        padding: 40px 40px 0px;
+    }
+
+    /*Single*/
+    section#single{
+        padding:40px 20px;
+    }
+
+    section#single .sectiontitle{
+        font-size:1.8rem;
+
+    }
+}
+@media all and (max-width: 768px) {
+	
+}
+@media all and (max-width: 576px) {
+	
+}
+@media all and (max-width: 376px) {
+
+}

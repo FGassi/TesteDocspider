@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon-->
+    <link rel="shortcut icon" type="icon-docspider" href="images/icon-logo.ico">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+
+    <title>Docspider Teste Desenvolvimento</title>
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Animation -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="bg-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="nav-container">
+                            <div class="nav-toggle" onclick="toggleNav()"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-11">
+                        <div id="logoimage">
+                            <img src="images/docspider-logo.png"
+                                alt="Logo Docspider">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <!-- Menu -->
+                        <nav class="nav-items nav-menu" >
+                            <ul>
+                                <li><a href="index.html">Inicio <i class="fas fa-home"></i></a></li>
+                                <li><a href="meusdocs.html">Meus Documentos <i class="far fa-copy"></i></a></li>
+                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre <i class="fas fa-info-circle"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <!--Main Content-->
+    <main>
+        
+        <!-- Header post -->
+        <div id="headerpost">
+            <img src="images/docspider-suite.jpg"
+            alt="O Docspider Suite é uma ferramenta totalmente integrada em ambiente Web voltada para a automatização e gestão de processos ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="date">
+                            <p>19.AGO.2024</p>
+                        </div>
+                        <div class="categories">
+                            <p>Categorias:</p>
+                            <a href="#">Categoria 1</a>
+                            <a href="#">Categoria 2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section -->
+        <section id="single" class="animate__animated animate__fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h1 class="sectiontitle">Docspider Suite</h1>
+                        <div class="mediashare">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://api.whatsapp.com/send?text=#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <p>O Docspider Suite é uma ferramenta totalmente integrada em ambiente Web voltada para a automatização e gestão de processos (Workflow), Formulários (Forms), documentos (GED), Conteúdo, Conhecimento e colaboração de forma corporativa. Estas funções integradas em uma ferramenta robusta, permitem a companhia disponibilizar de forma rápida, segura e objetiva todo e qualquer tipo de processo, formulário, documento, informação, aplicação, conteúdo e conhecimento através de múltiplos portais departamentais, corporativos ou para público externo, através de ambientes colaborativos como Intranets, extranets e Internet.</p>
+                        <ul>
+                            <li>Confiabilidade</li>
+                            <li>Segurança</li>
+                            <li>Características exclusivas de controle</li>
+                        </ul>
+                        <p>O Docspider Suite com sua estrutura de recursos e meta dados proporciona sustentação e produtividade em processos de auditoria, dando produtividade e eficiência na análise através das trilhas de auditoria e recursos de rastreabilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-conteudo">
+                    <img src="images/docspider-logo.png"
+                    alt="Logo Docspider">
+                    <p>v 1.0.0</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,654 @@
+/*
+Theme Name: Teste de Desenvolvimento da Docspider
+Theme URI: 
+Author: Felipe Gassi
+Author URI: https://br.linkedin.com/in/felipegassi
+Description: Tema para o teste de desenvolvimento da empresa Docspider
+*/
+
+@charset "UTF-8";
+
+
+/*#################################################################################################### 
+/ RESET CSS
+/###################################################################################################*/
+
+body, html {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Notosans', 'arial', sans-serif;
+	outline: none;
+}
+
+html{
+	overflow-x:hidden;
+}
+
+input, textarea, select {
+	display: block;
+	outline: none;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote {
+    margin: 0;
+    padding: 0;
+	display: block;
+}
+
+
+
+a:hover, a:active, a:focus, a:link {
+	text-decoration: none;
+   
+}
+
+abbr{
+	color: #133053;
+	text-decoration: none !important;
+}
+
+/*
+div.wpcf7-mail-sent-ok,
+div.wpcf7-response-output,
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+	margin: 0 0.5em 1em;
+    padding: 0.2em 1em;
+	color: #fff;
+    text-align: center;
+	font-size: 12px;
+}*/
+
+/*#################################################################################################### 
+/ CUSTOM SCROLLBAR
+/###################################################################################################*/
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+	background: #00000071; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: #212a33; 
+	border-radius:10px;
+	
+}
+
+/*#################################################################################################### 
+/ NAV & HEADER 
+/###################################################################################################*/
+
+.nav-container{
+	display:flex;
+	justify-content: center;
+}
+
+.nav-container .nav-toggle {
+	position: relative;
+	width: 30px;
+	height: 50px;
+	z-index: 1;
+	
+}
+
+.bg-menu{
+	background: linear-gradient(90deg, rgba(0,10,71,1) 0%, rgba(0,67,136,1) 100%);
+}
+
+header nav ul li a{
+	display: flex;
+	justify-content: space-between;
+	margin-top:15px;
+	padding:0px 15px 8px;
+	text-decoration: none;
+	color: #a3a3a3;
+	box-shadow: 0 4px 2px -2px rgb(214, 214, 214);
+}
+	
+
+header nav ul li a:hover{
+	color:#000;
+}
+
+.activelink{
+	color:#004388 ;
+}
+
+header nav {
+	width: 300px;
+	height: 100vh;
+	position: fixed;
+	z-index: 999999;
+  	left: -250px;
+	box-shadow: 5px 0 5px -5px #a3a3a3;
+	background-color:white;
+	transition: transform 0.2s;
+}
+
+
+.nav-open .nav-menu {
+	transform: translateX(250px);
+  }
+  
+.nav-open main {
+	transform: translateX(250px);
+  }
+
+.nav-container .nav-toggle:hover {
+	cursor: pointer;
+}
+.nav-container .nav-toggle:before, .nav-container .nav-toggle:after {
+	content: "";
+	position: absolute;
+	top: 23px;
+	left: 0;
+	transform: translate(0, 0);
+	width: 90%;
+	height: 4px;
+	background: #ffffff;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-container .nav-toggle:before {
+	box-shadow: 0 10px 0 0 #ffffff;
+}
+.nav-container .nav-toggle:after {
+	box-shadow: 0 -10px 0 0 #ffffff;
+}
+
+header{
+	position: fixed;
+	width: 100%; 
+	z-index: 9;
+}
+
+#logoimage img{
+	width: 100px;
+	height: 50px;
+  object-fit: cover;
+}
+
+.modal-conteudo{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.modal-conteudo img{
+	object-fit: cover;
+	height:80%;
+}
+
+/*#################################################################################################### 
+/ SECTIONS
+/###################################################################################################*/
+
+section {
+	padding:30px 30px 0px;
+}
+
+section h2,h3{
+	color:#6D6966;
+	margin-top:20px;
+}
+
+
+/*#################################################################################################### 
+/ NAV SECTION
+/###################################################################################################*/
+
+#nav-links ul{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#nav-links ul li{
+	margin-right:10px;
+}
+
+#nav-links ul li a{
+	text-decoration:none;
+	color:#a3a3a3;
+}
+
+#nav-links ul li a.activelink{
+	color:#004388 ;
+}
+
+/*#################################################################################################### 
+/ MAIN
+/###################################################################################################*/
+
+main {
+	transition: transform 0.2s;
+	padding-top:50px;
+}
+
+/*#################################################################################################### 
+/ SINGLE
+/###################################################################################################*/
+
+.sectiontitle{
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color:#295581;
+	margin-bottom:20px;
+	line-height: 2.3rem;
+}
+
+.news{
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px #e4e4e4;
+	padding:15px;
+	display: flex;
+
+	flex-direction: column;
+}
+
+.news:hover{
+	box-shadow: 0px 0px 10px #a3a3a3;
+	transition: ease-in 0.2s;
+}
+
+.news > * {
+	margin-bottom:10px;
+}
+
+.news h3{
+	color:#295581 !important;
+	text-decoration: none !important;
+}
+
+.news p{
+	color:#686868;
+}
+.news p:hover{
+	color:#686868;
+}
+
+.news img{
+	width:100%;
+	object-fit:cover;
+	height:300px;
+}
+
+.simplebtn{
+	background-color:#295581;
+	border:1px solid #295581;
+	color:#fff;
+	border-radius: 3px;
+	padding:10px;
+	margin-top:10px;
+	text-transform: capitalize;
+	transition:ease .3s all;
+}
+
+.invalidbtn{
+	
+	border:1px solid #aaaaaa;
+	color:#aaaaaa;
+	border-radius: 3px;
+	padding:10px;
+	margin-top:10px;
+	text-transform: capitalize;
+	
+}
+
+.simplebtn:hover{
+	border-color:#295581;
+	color:#295581;
+	background-color:transparent;
+	
+}
+
+/*#################################################################################################### 
+/ FORMS
+/###################################################################################################*/
+
+.alinhar-form{
+	display:flex;
+}
+
+.work-form{
+	margin-bottom:30px;
+}
+
+
+section#formfiles h2.sectiontitle{
+	color:#fff;
+	text-align: left;
+	line-height: 2.5rem;
+}
+
+section#formfiles h2.sectiontitle span{
+	font-weight: lighter;
+}
+section#formfiles p.sectionsubtitle{
+	color:#fff;
+	text-align: left;
+}
+
+section#formfiles .divisor{
+	justify-content: flex-start;
+}
+
+section#formfiles .lineleft,
+section#formfiles .dot,
+section#formfiles .lineright{
+	background-color:#fff;
+}
+
+section#formfiles p.warning{
+	color:white;
+	line-height: 1.5rem;
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+
+section#formfiles .input-form{
+	border-radius:3px;
+	padding:.5rem;
+	width:100%;
+	background-color:#ececec;
+	border:none;
+	color:#6D6966;
+	border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+	margin-bottom: 20px;
+	transition:ease .2s all;
+}
+
+section#formfiles .input-form:focus{
+	border-color:#000;
+	color:#000;
+}
+
+/*Float Label*/
+section#formfiles .has-float-label{
+	display:block;
+	position:relative
+}
+
+section#formfiles .has-float-label .input-form:placeholder-shown:not(:focus)+*{
+	color:#6D6966;
+	font-size:100%;
+	top:.75em
+}
+
+section#formfiles .has-float-label label{
+	margin:0px;
+	position:absolute;
+	cursor:text;
+	font-size:75%;
+	color:#6D6966;
+	opacity:1;
+	transition:all .2s;
+	/*Upside borderinput*/
+	top:-1.3em;
+	/*On border input
+	top:-.5em;*/
+	left:.3rem;
+	z-index:3;
+	line-height:1;
+	padding:0 1px
+}
+
+/*Line that hidden outline - use when label is on border input
+.has-float-label label::after{
+	content:" ";
+	display:block;
+	position:absolute;
+	background:#9baab4;
+	height:2px;
+	top:50%;
+	left:-.2em;
+	right:-.2em;
+	z-index:-1
+}*/
+
+/*Hidden Placeholder*/
+section#formfiles .has-float-label .input-form::placeholder{
+	opacity:0;
+}
+
+section#formfiles .has-float-label .input-form:placeholder-shown:not(:focus)::placeholder{
+	opacity:0;
+}
+
+/*
+input[type="file"]{
+    display: none;
+}
+
+.custom-file-upload {
+	color:#000;
+    display: inline-block;
+	cursor: pointer;
+	padding:.5rem;
+	border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+	background-color:#9baab4;
+	transition: ease .2s all;
+	margin-bottom:20px;
+}
+
+.custom-file-upload:hover{
+	border-color:#fff;
+	color: #fff !important;
+}
+
+.custom-file-upload i{
+	height:17;
+	width: 17;
+	margin-left:5px;
+}
+
+span#file-name{
+	color:#fff;
+}*/
+
+section#formfiles .file-upload {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom:20px;
+  }
+  
+section#formfiles .file-upload-input {
+	display: none;
+	visibility: hidden;
+  }
+  
+section#formfiles .input-form-file{
+	border-radius:3px;
+	padding:.5rem;
+	width:auto;
+	background-color:#ececec;
+	border:none;
+	color:#6D6966;
+	border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+	margin-left:10px;
+	transition:ease .2s all;
+}
+
+section#formfiles .input-form-file:focus, section#formfiles .input-form-file:hover{
+	outline: none;
+	border-color:#0e0e0e;
+	color:#0e0e0e;
+}
+  
+section#formfiles .input-form-file-label {
+	color:#fff;
+	max-width: 250px;
+	font-size: 0.95em;
+	overflow: hidden;
+	margin-bottom:0px;
+}
+  
+section#formfiles input[type="submit"].input-form{
+	width:auto;
+	margin-bottom: 0px;
+}
+
+section#formfiles input[type="submit"].input-form:hover, input[type="submit"].input-form:focus{
+	color:#0e0e0e;
+	border-color: #0e0e0e;
+}
+
+
+/*#################################################################################################### 
+/ SINGLE
+/###################################################################################################*/
+div#headerpost{
+	padding:0px;
+}
+
+div#headerpost img{
+	width:100%;
+	height:200px;
+	object-fit: cover;
+}
+
+div#headerpost div.date,
+div#headerpost div.categories{
+	display: flex;
+    justify-content: center;
+}
+
+div#headerpost .date p{
+	text-align: center;
+	background-color: #295581;
+    color: #fff;
+    padding: 5px 10px;
+    width: 160px;
+    margin-top: -15px;
+	position: relative;
+	text-transform: uppercase;
+}
+
+div#headerpost div.categories{
+	margin-top:30px;
+}
+
+div#headerpost .categories p{
+	margin-right: 5px;
+	display: inline-block;
+	color: #295581;
+	font-weight: bold;
+}
+
+div#headerpost .categories a{
+	margin-right: 5px;
+	color:#000;
+}
+
+div#headerpost .categories a:hover{
+	text-decoration: underline;
+}
+
+
+section#single{
+	padding:50px 90px;
+}
+
+section#single .sectiontitle{
+	line-height: 3rem;
+	margin-bottom:30px;
+}
+
+section#single p{
+	text-align: justify;
+	margin-bottom:20px;
+	line-height: 1.8rem;
+}
+
+section#single ul{
+	display: block;
+	  padding-left: 20px;
+	  margin-bottom:20px;
+}
+
+section#single figure{
+	margin:0px;
+}
+
+section#single h2,
+section#single h3,
+section#single h4,
+section#single h5,
+section#single h6{
+	text-transform: uppercase;
+    font-weight: bold;
+	color: #133053;
+	margin-bottom:20px;
+}
+section#single img{
+	margin-bottom:20px;
+}
+
+section#single ul li{
+	display: list-item;
+	list-style-type: none;
+}
+
+section#single ul li:before {
+	color:#133053;
+    content: '\f105'; 
+	font-family: "Font Awesome 5 Free"; 
+	font-weight: bold;
+    font-style: normal;
+	display: inline-block;
+	margin-left: -1.3em; 
+	width: 16px; 
+  }
+
+.mediashare{
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.mediashare a{
+	height:40px;
+	width:40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:#1c1c1c;
+	border:1px solid #1c1c1c;
+	margin-right:10px;
+	transition:ease all .2s;
+}
+
+.mediashare a:hover{
+	background-color:#1c1c1c;
+	color:#fff;
+	border-color:#fff;
+}
+
+/*#################################################################################################### 
+/ TABLE
+/###################################################################################################*/
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 15px;
+  }
+  
+  tr:nth-child(even) {
+	background-color: #e7e7e7;
+  }
